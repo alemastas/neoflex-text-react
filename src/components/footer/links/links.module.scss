@@ -1,0 +1,15 @@
+.links_ul{
+    list-style: none;
+    .links_text{
+        line-height: 30px;
+    
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        .non_decoration{
+            text-decoration: none;
+            color: black;
+        }
+    }
+}

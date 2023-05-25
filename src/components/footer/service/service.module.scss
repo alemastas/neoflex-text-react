@@ -1,0 +1,43 @@
+.services{
+    margin: 0 0 0 50px;
+    .lang_handler{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        left: 10px;
+
+        margin-top: 30px;
+    }
+    .lang_button{
+        border: none;
+        background-color: inherit;
+        text-align: center;
+
+        line-height: 30px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+    }
+    .lang_button:hover{
+        cursor: pointer;
+        background-color: #FFA542;
+        border-radius: 5px;
+    }
+    .lang_icon{
+        width: 20px;
+        height: 20px;
+    }
+    .lang_text{
+        line-height: 30px;
+    
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+    }
+    .colored{
+        color: orange;
+    }
+}

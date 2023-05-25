@@ -1,0 +1,29 @@
+.social_media_icon:hover::after {
+    content: attr(data-title);
+    position: absolute; 
+    left: 20%; top: 30%; 
+    z-index: 1; 
+    background: #ffa442d4; 
+    font-family: 'Montserrat';
+    font-size: 15px; 
+    padding: 5px 10px; 
+    border: 1px solid #333; 
+    border-radius: 5px;
+}
+
+.social_media{
+    position: relative;
+    width: 126px;
+    height: 30px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 29px 20px 0 0;
+    .minimize_icon{
+        width: 33px;
+        height: 33px;
+    }
+}

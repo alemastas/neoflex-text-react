@@ -68,7 +68,7 @@ export const headphones = [
 
 ];
 
-(function addIdCounts(){ // add props for work
+(function addIdCounts(){ // add types for sort
     headphones.forEach(el => {
         el.id = (headphones.indexOf(el))
         el.counts = 1;
