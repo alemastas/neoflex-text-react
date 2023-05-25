@@ -1,7 +1,7 @@
 // shop items headphones
 // hdph - wired headphones
 // wrls - wireless headphones
-export const headphones = [
+export const Headphones = [
     {
         img: '../../Img/headphones/Image1.png',
         title: 'Apple BYZ S852I', 
@@ -68,9 +68,11 @@ export const headphones = [
 
 ];
 
-(function addIdCounts(){ // add types for sort
-    headphones.forEach(el => {
-        el.id = (headphones.indexOf(el))
+function addIdCounts(Headphones){ // add types for sort
+    Headphones.forEach(el => {
+        el.id = (Headphones.indexOf(el))
         el.counts = 1;
     })
-})()
+}
+
+export default addIdCounts;
