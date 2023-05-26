@@ -1,0 +1,82 @@
+.card{
+    position: relative;
+    width: 340px;
+    height: 407px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+
+    margin: 15px;
+    h3{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 21px;
+    
+        color: #1C1C27;
+    }
+    .card_img{
+        height: 230px;
+        padding-top: 30px;
+    
+        text-align: center;
+    }
+    .card_line{
+        position: relative;
+        top: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 25px 0 25px;
+        margin-top: 15px;
+    }
+    .card_rate{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .card_span{
+        position: relative;
+        left: 5px;
+    
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 21px;
+    
+        color: #838383;
+    }
+    .card_price{
+        display: flex;
+        flex-direction: column;
+    }
+    .card_button{
+        /* width: 50px; */
+        height: 30px;
+        border: none;
+        background-color: inherit;
+        text-align: center;
+    }
+    .card_button:hover{
+        cursor: pointer;
+        background-color: #FFA542;
+        border-radius: 10px;
+    }
+    .regular{
+        line-height: 0;
+        margin: 10px;
+        color: #FFA542;
+        font-size: 20px;
+    }
+    .regular_striked{
+        line-height: 1;
+        margin: 10px;
+        text-decoration: line-through;
+
+    }
+}
+

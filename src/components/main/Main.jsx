@@ -1,6 +1,8 @@
 import styles from './main.module.scss';
-import Headphones from '../../const/Headphones';
-// import Card from '../card/Card';
+import addIdCounts, { Headphones } from '../../const/Headphones';
+import Card from '../../components/card/Card';
+
+console.log(addIdCounts(Headphones))
 
 function Main(){
     return (
@@ -12,18 +14,14 @@ function Main(){
                     Headphones
                 </p>
                 </div>
+                <div className={styles.card_container} id="hdph_container">
 
-                <div className={styles.card_container} id="card_container">
+                {addIdCounts(Headphones).map(el =>{
+                      if(el.type === 'hdph'){ return <Card props={el} key={el.id}/> }
+                      else return null
+                  })}
 
-                    {/* {Headphones.map(el => {
-                        if(el.type === 'hdph'){
-                            <Card props={el}/>
-                        }
-                    })} */}
-
-                {/* here cards rendering */}
                 </div>
-
             </div>
             <div className={styles.main_hdphns_container}>
                 <div className={styles.main_hdfns_title}>
@@ -32,7 +30,12 @@ function Main(){
                 </p>
                 </div>
                 <div className={styles.card_container} id="wrls_container">
-                {/* here cards rendering */}
+
+                {addIdCounts(Headphones).map(el =>{
+                      if(el.type === 'wrls'){ return <Card props={el} key={el.id}/> }
+                      else return null;
+                  })}
+                  
                 </div>
             </div>
         </main>

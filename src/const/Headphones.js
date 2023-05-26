@@ -1,6 +1,7 @@
 // shop items headphones
 // hdph - wired headphones
 // wrls - wireless headphones
+
 export const Headphones = [
     {
         img: '../../Img/headphones/Image1.png',
@@ -73,6 +74,7 @@ function addIdCounts(Headphones){ // add types for sort
         el.id = (Headphones.indexOf(el))
         el.counts = 1;
     })
+    return Headphones;
 }
 
 export default addIdCounts;
