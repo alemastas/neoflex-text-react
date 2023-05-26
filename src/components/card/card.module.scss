@@ -25,7 +25,6 @@
     }
     .card_line{
         position: relative;
-        top: 40px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -60,6 +59,9 @@
         border: none;
         background-color: inherit;
         text-align: center;
+        .card_button_text{
+            font-size: 20px;
+        }
     }
     .card_button:hover{
         cursor: pointer;

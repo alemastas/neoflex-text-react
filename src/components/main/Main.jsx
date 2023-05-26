@@ -2,8 +2,6 @@ import styles from './main.module.scss';
 import addIdCounts, { Headphones } from '../../const/Headphones';
 import Card from '../../components/card/Card';
 
-console.log(addIdCounts(Headphones))
-
 function Main(){
     return (
         <main className={styles.main}>
@@ -38,6 +36,7 @@ function Main(){
                   
                 </div>
             </div>
+            <div className={styles.boopher}></div>
         </main>
     )
 }
