@@ -1,7 +1,15 @@
 import styles from './card.module.scss';
+import { addBasket } from '../../index';
+import { updateIndicator, getLang } from '../../helpers/Helpers';
 
 function Card({props}){ // for check: '../../img/headphones/Image1.png'
     // TODO dynamic img print
+    
+    function btnClick(){
+        addBasket(props.id);
+        updateIndicator();
+    }
+
     return (
         <div className={styles.card}>
             <div className={styles.card_img}>
@@ -29,9 +37,12 @@ function Card({props}){ // for check: '../../img/headphones/Image1.png'
                     {props.rate}
                 </span>
                 </div>
-                <button className={styles.card_button} id={props.id}>
-                <span className={styles.card_button_text}>
-                    {sessionStorage.getItem('lang') === 'rus' ? 'Купить' : 'Buy'}
+                <button className={styles.card_button} 
+                    id={props.id}
+                    onClick={btnClick}
+                    >
+                <span className={styles.card_button_text} id={props.id}>
+                    {getLang() === 'rus' ? 'Купить' : 'Buy'}
                 </span>
                 </button>
             </div>

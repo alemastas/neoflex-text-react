@@ -25,7 +25,7 @@ function SocialMedia(){
             </a>
         </div>
         <div className={styles.social_media_icon} data-title="Github">
-            <a href="https://github.com/alemastas/test-task-neoflex">
+            <a href="https://github.com/alemastas/test-task-neoflex-react">
             <img
                 src={gthb}
                 className={styles.minimize_icon}

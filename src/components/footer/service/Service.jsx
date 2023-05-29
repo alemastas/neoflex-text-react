@@ -1,11 +1,12 @@
 import styles from './service.module.scss';
 import service from "../../../img/icons/Lang.svg"
+import { setLang, getLang} from '../../../helpers/Helpers';
 
 function Service(){
     return(
         <div className={styles.services}>
             <p className={styles.lang_text} id="services" style={{ pointerEvents: "none" }}>
-                Terms of service
+                {getLang() === 'rus' ? 'Сервис' : 'Terms of service'}
             </p>
             <div className={styles.lang_handler}>
                 <div className={styles.lang_icon}>
@@ -15,11 +16,18 @@ function Service(){
                     alt="lang_icon.png"
                 />
                 </div>
-                <button className={styles.lang_button} id="rus">
-                Рус
+                <button className={styles.lang_button} id="rus"
+                    onClick={function (){
+                        setLang('rus')
+                    }}>
+                    Рус
                 </button>
-                <button className={styles.lang_button} id="eng">
-                Eng
+                <button className={styles.lang_button} 
+                    id="eng"
+                    onClick={function (){
+                        setLang('eng')
+                    }}>
+                    Eng
                 </button>
             </div>
         </div>

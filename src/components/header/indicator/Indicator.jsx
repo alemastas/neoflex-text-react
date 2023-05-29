@@ -1,8 +1,13 @@
-import Heart from '../../../img/icons/Heart.svg'
-import Basket from '../../../img/icons/Basket.svg'
-import styles from'./indicator.module.scss'
+import { useState } from 'react';
+import Heart from '../../../img/icons/Heart.svg';
+import Basket from '../../../img/icons/Basket.svg';
+import styles from'./indicator.module.scss';
+import { basketIndicatorFunction } from '../../../helpers/Helpers';
 
-function Indicator(){
+function Indicator(){ // TODO indicator 
+    // const indicator = document.getElementById('basket_indicator');
+
+    const [count, setCount] = useState(basketIndicatorFunction());
     return (
         <div className={styles.icons}>
             <div className={styles.icon}>
@@ -13,10 +18,14 @@ function Indicator(){
             <img src={Basket} alt="basket icon" />
             </a>
         </div>
-            <div className="circle_indicator">
-            <span id="basket_indicator" />
+            <div className={styles.basket_indicator}>
+            <span id="basket_indicator"
+            onChange={(onChange) => setCount(basketIndicatorFunction())}>
+            {count}
+            </span>
             </div>
         </div>
     )
 }
+
 export default Indicator;
