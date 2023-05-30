@@ -9,7 +9,7 @@ function Card({props}){
         <div className={styles.basket_card}>
             <div className={styles.basket_card_line}>
                 <div className={styles.basket_card_img_holder}>
-                <img className={styles.basket_card_img} src={props.img} alt="headphones" />
+                <img className={styles.basket_card_img} src={require('../../img/headphones/Image1.png')} alt="headphones" />
                 </div>
                 <div className={styles.basket_card_naming}>
                 <div className={styles.card_name}>
@@ -18,7 +18,7 @@ function Card({props}){
                     </h3>
                 </div>
                 <div className={styles.card_price}>
-                    <p className="regular plus_sized">
+                    <p className={styles.basket_card_text}>
                     ${props.price} ₽
                     </p>
                 </div>
@@ -29,7 +29,7 @@ function Card({props}){
                     className="basket_delete_button"
                     data-title="Delete"
                     id={props.id}
-                    src="../../Img/iconcs/Rubish.png"
+                    src={require('../../img/icons/Rubish.png')}
                     alt="delete item"
                 />
                 </div>
@@ -47,8 +47,8 @@ function Card({props}){
                 </button>
                 </div>
                 <div className={styles.card_price}>
-                <p className="regular plus_sized" id={props.id}>
-                    ${props.price * props.counts} ₽
+                <p className={styles.basket_card_text} id={props.id}>
+                    {props.price * props.counts} ₽
                 </p>
                 </div>
             </div>
