@@ -1,0 +1,56 @@
+
+.basket_wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    .basket_shop{
+        width: 350px;
+        height: 115px;
+        margin-top: 15px;
+    
+        background: #FFFFFF;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+    }
+    .basket_shop_button{
+        position: relative;
+        width: 350px;
+        height: 65px;
+    
+        background: #101010;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+    }
+    .basket_placeholder{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        padding: 0 20px 0 20px;
+    }
+    .result_palceholder{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .card_container{
+        position: relative;
+        width: 1140px;
+    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .basket_shop_button_text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 21px;
+        color: white;
+    }
+}
+
+

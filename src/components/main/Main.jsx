@@ -16,7 +16,7 @@ function Main(){
                 <div className={styles.card_container} id="hdph_container">
 
                 {addIdCounts(Headphones).map(el =>{
-                      if(el.type === 'hdph'){ return <Card props={el} id={el.id}/> }
+                      if(el.type === 'hdph'){ return <Card props={el} key={el.id}/> }
                       else return null
                 })}
 
@@ -31,14 +31,14 @@ function Main(){
                 <div className={styles.card_container} id="wrls_container">
 
                 {addIdCounts(Headphones).map(el =>{
-                      if(el.type === 'wrls'){ return <Card props={el} id={el.id}
+                      if(el.type === 'wrls'){ return <Card props={el} key={el.id}
                       /> }
                       else return null;
                 })}
                   
                 </div>
             </div>
-            <div className={styles.boopher}></div>
+            {/* <div className={styles.boopher}></div> */}
         </main>
     )
 }

@@ -1,9 +1,22 @@
 import styles from './basket_card.module.scss';
-import { updateIndicator, getLang } from '../../helpers/Helpers';
+import { deleteItem, plusItem, minusItem, getTempBasket } from '../../helpers/Helpers';
+import { useState } from 'react';
 
-function Card({props}){ 
+function Card({props}, {func}){ 
     // for check: '../../img/headphones/Image1.png'
-    // TODO dynamic img print
+
+    function sumOfCounts(id){
+        let item = getTempBasket().find(el => el.id === id);
+        return item.counts * item.price;
+    }
+
+    function countsOfItem(id){
+        let item = getTempBasket().find(el => el.id === id);
+        return item.counts;
+    }
+
+    const [sum, setSum] = useState(props.price * props.counts);
+    const [count, setCounts] = useState(props.counts);
 
     return (
         <div className={styles.basket_card}>
@@ -31,24 +44,41 @@ function Card({props}){
                     id={props.id}
                     src={require('../../img/icons/Rubish.png')}
                     alt="delete item"
+                    onClick={function (){
+                        deleteItem(props.id);
+                    }}
                 />
                 </div>
             </div>
             <div className={styles.basket_card_counter}>
                 <div className={styles.basket_card_numbers}>
-                <button className={styles.basket_card_counter_btn} id={props.id}>
+                <button className={styles.basket_card_counter_btn} 
+                    id={props.id}
+                    onClick={function (){
+                        minusItem(props.id);
+                        setSum(sumOfCounts(props.id));
+                        setCounts(countsOfItem(props.id));
+                    }}>
                     -
                 </button>
                 <span id={props.id}>
-                    {props.counts}
+                    {count}
                 </span>
-                <button className={styles.basket_card_counter_btn} id={props.id}>
+                <button className={styles.basket_card_counter_btn} 
+                    id={props.id}
+                    onClick={function(){
+                        plusItem(props.id);
+                        setSum(sumOfCounts(props.id));
+                        setCounts(countsOfItem(props.id));
+
+                    }}
+                    >
                     +
                 </button>
                 </div>
                 <div className={styles.card_price}>
                 <p className={styles.basket_card_text} id={props.id}>
-                    {props.price * props.counts} ₽
+                    {sum} ₽
                 </p>
                 </div>
             </div>

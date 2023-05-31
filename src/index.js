@@ -16,8 +16,6 @@ window.onload = function(){
   checkLang();
 }
 
-
-
 export function addBasket(id) { // add item to local storage)
   let temp_basket = getTempBasket();
   (temp_basket.length === 0) ? isNotDublicate(id) : ifDublicate(id);

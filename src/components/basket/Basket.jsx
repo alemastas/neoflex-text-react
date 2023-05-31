@@ -1,33 +1,30 @@
 import styles from './basket.module.scss';
-import addIdCounts, { Headphones } from '../../const/Headphones';
-import Card from '../../components/card/Card';
 import { getLang, getTempBasket } from '../../helpers/Helpers';
-import Basket_card from './../basket_card/Basket_card'
+import BasketCard from '../basket_card/BasketCard'
+import BasketBoard from '../basket_board/BasketBoard';
+import { useState } from 'react';
 
 function Basket(){
+    const [basket, setBasket] = useState(getTempBasket());
     return (
         <main className={styles.main}>
             <div className={styles.main_hdphns_container}>
-
                 <div className={styles.main_hdfns_title}>
                 <p className={styles.main_hdfns_title}>
                     {getLang() === 'rus' ? 'Корзина' : 'Basket'}
                 </p>
                 </div>
-                <div className={styles.basket_container} id="basket_container">
 
-                {getTempBasket().map( el => {
-                    return <Basket_card props={el} id={el.id}/>
-                })}
-{/* 
-                {addIdCounts(Headphones).map(el =>{
-                      if(el.type === 'hdph'){ return <Card props={el} id={el.id}/> }
-                      else return null
-                })} */}
+                <div className={styles.basket_wrapper}>
+                    <div className={styles.basket_container} id="basket_container">
+                    {basket.map( el => {
+                        return <BasketCard props={el} func={setBasket} key={el.id}/>
+                    })}
+                    </div>
 
+                    <BasketBoard />
                 </div>
             </div>
-
             <div className={styles.boopher}></div>
         </main>
     )
