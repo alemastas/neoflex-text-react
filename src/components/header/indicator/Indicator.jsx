@@ -19,8 +19,7 @@ function Indicator(){ // TODO indicator
             </a>
         </div>
             <div className={styles.basket_indicator}>
-            <span id="basket_indicator"
-            onChange={(onChange) => setCount(basketIndicatorFunction())}>
+            <span id="basket_indicator">
             {count}
             </span>
             </div>
