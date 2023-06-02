@@ -1,13 +1,13 @@
 import styles from './card.module.scss';
 import { addBasket } from '../../index';
-import { updateIndicator, getLang } from '../../helpers/Helpers';
+import { updateIndicator, getLang, getTempBasket } from '../../helpers/Helpers';
 
-function Card({props}){ // for check: '../../img/headphones/Image1.png'
-    // TODO dynamic img print
+function Card({props, setBasket}){ 
     
     function btnClick(){
         addBasket(props.id);
         updateIndicator();
+        setBasket(getTempBasket());
     }
 
     return (

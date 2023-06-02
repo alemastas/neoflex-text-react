@@ -2,8 +2,7 @@ import { useState } from 'react';
 import styles from'./indicator.module.scss';
 import { basketIndicatorFunction } from '../../../helpers/Helpers';
 
-function Indicator(){ // TODO indicator 
-    // const indicator = document.getElementById('basket_indicator');
+function Indicator(){ // TODO fix indicator from useState
 
     const [count, setCount] = useState(basketIndicatorFunction());
     return (

@@ -1,9 +1,9 @@
 import styles from './main.module.scss';
-import addIdCounts, { Headphones } from '../../const/Headphones';
+import { Headphones } from '../../const/Headphones';
 import Card from '../../components/card/Card';
 import { getLang } from '../../helpers/Helpers';
 
-function Main(){
+function Main({setBasket}){
     return (
         <main className={styles.main}>
             <div className={styles.main_hdphns_container}>
@@ -15,8 +15,8 @@ function Main(){
                 </div>
                 <div className={styles.card_container} id="hdph_container">
 
-                {addIdCounts(Headphones).map(el =>{
-                      if(el.type === 'hdph'){ return <Card props={el} key={el.id}/> }
+                {Headphones.map(el =>{
+                      if(el.type === 'hdph'){ return <Card setBasket={setBasket} props={el} key={el.id}/> }
                       else return null
                 })}
 
@@ -30,8 +30,8 @@ function Main(){
                 </div>
                 <div className={styles.card_container} id="wrls_container">
 
-                {addIdCounts(Headphones).map(el =>{
-                      if(el.type === 'wrls'){ return <Card props={el} key={el.id}
+                {Headphones.map(el =>{
+                      if(el.type === 'wrls'){ return <Card setBasket={setBasket} props={el} key={el.id}
                       /> }
                       else return null;
                 })}

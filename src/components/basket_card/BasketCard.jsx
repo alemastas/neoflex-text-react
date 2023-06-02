@@ -2,9 +2,7 @@ import styles from './basket_card.module.scss';
 import { deleteItem, plusItem, minusItem, getTempBasket } from '../../helpers/Helpers';
 import { useState } from 'react';
 
-function BasketCard({props}){ 
-    // console.log(props)
-    // for check: '../../img/headphones/Image1.png'
+function BasketCard({props, setBasket}){ 
 
     function sumOfCounts(id){
         let item = getTempBasket().find(el => el.id === id);
@@ -47,6 +45,7 @@ function BasketCard({props}){
                     alt="delete item"
                     onClick={function (){
                         deleteItem(props.id);
+                        setBasket(getTempBasket())
                     }}
                 />
                 </div>

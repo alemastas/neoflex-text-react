@@ -75,5 +75,4 @@ function addIdCounts(Headphones){ // add types for sort
     })
     return Headphones;
 }
-
-export default addIdCounts;
+addIdCounts(Headphones);
