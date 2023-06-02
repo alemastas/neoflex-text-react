@@ -22,7 +22,7 @@ function Card({props}, {func}){
         <div className={styles.basket_card}>
             <div className={styles.basket_card_line}>
                 <div className={styles.basket_card_img_holder}>
-                <img className={styles.basket_card_img} src={require('../../img/headphones/Image1.png')} alt="headphones" />
+                <img className={styles.basket_card_img} src={props.img} alt="headphones" />
                 </div>
                 <div className={styles.basket_card_naming}>
                 <div className={styles.card_name}>
