@@ -2,7 +2,8 @@ import styles from './basket_card.module.scss';
 import { deleteItem, plusItem, minusItem, getTempBasket } from '../../helpers/Helpers';
 import { useState } from 'react';
 
-function Card({props}, {func}){ 
+function BasketCard({props}){ 
+    // console.log(props)
     // for check: '../../img/headphones/Image1.png'
 
     function sumOfCounts(id){
@@ -22,7 +23,11 @@ function Card({props}, {func}){
         <div className={styles.basket_card}>
             <div className={styles.basket_card_line}>
                 <div className={styles.basket_card_img_holder}>
+<<<<<<< HEAD
                 <img className={styles.basket_card_img} src={props.img} alt="headphones" />
+=======
+                <img className={styles.basket_card_img} src="../../img/headphones/Image1.png" alt="headphones" />
+>>>>>>> 9d2a3586c370313b9b565834b81a8c85bca3f234
                 </div>
                 <div className={styles.basket_card_naming}>
                 <div className={styles.card_name}>
@@ -86,4 +91,4 @@ function Card({props}, {func}){
     )
 }
 
-export default Card;
+export default BasketCard;

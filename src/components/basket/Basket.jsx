@@ -17,7 +17,7 @@ function Basket(){
 
                 <div className={styles.basket_wrapper}>
                     <div className={styles.basket_container} id="basket_container">
-                    {basket.map( el => {
+                    {basket && basket?.map( el => {
                         return <BasketCard props={el} func={setBasket} key={el.id}/>
                     })}
                     </div>

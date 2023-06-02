@@ -20,11 +20,12 @@ export function setTempBasket(temp_basket) {
 // ------------------------------------ basket indicator logic ------------------------------------
 
 export function basketIndicatorFunction(){ // show sum of basketArray items in sessionStorage
-    let sumOfCounts = 0;
-    (JSON.parse( sessionStorage.getItem('basketArray'))).map(el => { 
-        return sumOfCounts += el.counts
-    })
-    return sumOfCounts;
+    // let sumOfCounts = 0;
+    // (JSON.parse( sessionStorage.getItem('basketArray')))?.map(el => { 
+    //     return sumOfCounts += el.counts
+    // })
+    // return sumOfCounts;
+    return getTempBasket().length;
 }
 
 export function updateIndicator(){ // show global counts of items in basket
@@ -87,7 +88,7 @@ export function minusItem(id){
 export function updateSum(){
     let totalSum = 0;
     let temp_basket = getTempBasket();
-    temp_basket.forEach(el =>(
+    temp_basket?.forEach(el =>(
         totalSum += (el.counts * el.price)
     ))
     return totalSum;
