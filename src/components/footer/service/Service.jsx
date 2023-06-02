@@ -1,5 +1,4 @@
 import styles from './service.module.scss';
-import service from "../../../img/icons/Lang.svg"
 import { setLang, getLang} from '../../../helpers/Helpers';
 
 function Service(){
@@ -12,7 +11,7 @@ function Service(){
                 <div className={styles.lang_icon}>
                 <img
                     className={styles.lang_icon}
-                    src={service}
+                    src="/img/icons/Lang.svg"
                     alt="lang_icon.png"
                 />
                 </div>

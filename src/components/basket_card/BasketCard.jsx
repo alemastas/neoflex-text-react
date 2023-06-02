@@ -23,11 +23,7 @@ function BasketCard({props}){
         <div className={styles.basket_card}>
             <div className={styles.basket_card_line}>
                 <div className={styles.basket_card_img_holder}>
-<<<<<<< HEAD
                 <img className={styles.basket_card_img} src={props.img} alt="headphones" />
-=======
-                <img className={styles.basket_card_img} src="../../img/headphones/Image1.png" alt="headphones" />
->>>>>>> 9d2a3586c370313b9b565834b81a8c85bca3f234
                 </div>
                 <div className={styles.basket_card_naming}>
                 <div className={styles.card_name}>
@@ -47,7 +43,7 @@ function BasketCard({props}){
                     className="basket_delete_button"
                     data-title="Delete"
                     id={props.id}
-                    src={require('../../img/icons/Rubish.png')}
+                    src='/img/icons/Rubish.png'
                     alt="delete item"
                     onClick={function (){
                         deleteItem(props.id);

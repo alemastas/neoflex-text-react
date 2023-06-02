@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import Heart from '../../../img/icons/Heart.svg';
-import Basket from '../../../img/icons/Basket.svg';
 import styles from'./indicator.module.scss';
 import { basketIndicatorFunction } from '../../../helpers/Helpers';
 
@@ -11,11 +9,11 @@ function Indicator(){ // TODO indicator
     return (
         <div className={styles.icons}>
             <div className={styles.icon}>
-            <img src={Heart} alt="favorit icon" />
+            <img src="/img/icons/Basket.svg" alt="favorit icon" />
         </div>
         <div className={styles.icon}>
             <a href="../basket/basket.html">
-            <img src={Basket} alt="basket icon" />
+            <img src="/img/icons/Heart.svg" alt="basket icon" />
             </a>
         </div>
             <div className={styles.basket_indicator}>

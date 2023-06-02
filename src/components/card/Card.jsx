@@ -32,7 +32,7 @@ function Card({props}){ // for check: '../../img/headphones/Image1.png'
             </div>
             <div className={styles.card_line}>
                 <div className={styles.card_rate}>
-                <img src={require("../../img/icons/Star.png")} alt="star" />
+                <img src="/img/icons/Star.png" alt="star" />
                 <span className={styles.card_span}>
                     {props.rate}
                 </span>
