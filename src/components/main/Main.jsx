@@ -38,7 +38,7 @@ function Main({setBasket}){
                   
                 </div>
             </div>
-            {/* <div className={styles.boopher}></div> */}
+            <div className={styles.boopher}></div>
         </main>
     )
 }

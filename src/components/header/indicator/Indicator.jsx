@@ -11,7 +11,7 @@ function Indicator(){ // TODO fix indicator from useState
             <img src="/img/icons/Basket.svg" alt="favorit icon" />
         </div>
         <div className={styles.icon}>
-            <a href="../basket/basket.html">
+            <a href="/basket">
             <img src="/img/icons/Heart.svg" alt="basket icon" />
             </a>
         </div>
