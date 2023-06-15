@@ -59,7 +59,6 @@ function BasketCard({props, setBasket, setCount}){
                         minusItem(props.id);
                         setSum(sumOfCounts(props.id));
                         setItemCounts(countsOfItem(props.id));
-                        setCount(basketIndicatorFunction());
                     }}>
                     -
                 </button>
@@ -72,8 +71,6 @@ function BasketCard({props, setBasket, setCount}){
                         plusItem(props.id);
                         setSum(sumOfCounts(props.id));
                         setItemCounts(countsOfItem(props.id));
-                        setCount(basketIndicatorFunction());
-
                     }}
                     >
                     +

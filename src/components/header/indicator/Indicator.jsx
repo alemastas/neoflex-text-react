@@ -1,4 +1,5 @@
 import styles from'./indicator.module.scss';
+import { Link } from 'react-router-dom';
 
 function Indicator({count, setCount }){ // TODO fix indicator from useState
 
@@ -9,9 +10,9 @@ function Indicator({count, setCount }){ // TODO fix indicator from useState
             <img src="/img/icons/Heart.svg" alt="favorit icon" />
         </div>
         <div className={styles.icon}>
-            <a href="/basket">
+            <Link to="/basket">
             <img src="/img/icons/Basket.svg" alt="basket icon" />
-            </a>
+            </Link>
         </div>
             <div className={styles.basket_indicator}>
             <span id="basket_indicator">
