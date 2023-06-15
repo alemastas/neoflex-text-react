@@ -8,7 +8,7 @@ function Links(){
             {getLang() === 'rus' ? 'Избанное' : 'Favorite'}
         </li>
         <li className={styles.links_text}>
-            <a href="../basket/basket.html" className={styles.non_decoration} id="basket">
+            <a href="/basket" className={styles.non_decoration} id="basket">
             {getLang() === 'rus' ? 'Корзина' : 'Basket'}
             </a>
         </li>

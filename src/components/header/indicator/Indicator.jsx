@@ -8,11 +8,11 @@ function Indicator(){ // TODO fix indicator from useState
     return (
         <div className={styles.icons}>
             <div className={styles.icon}>
-            <img src="/img/icons/Basket.svg" alt="favorit icon" />
+            <img src="/img/icons/Heart.svg" alt="favorit icon" />
         </div>
         <div className={styles.icon}>
             <a href="/basket">
-            <img src="/img/icons/Heart.svg" alt="basket icon" />
+            <img src="/img/icons/Basket.svg" alt="basket icon" />
             </a>
         </div>
             <div className={styles.basket_indicator}>
