@@ -3,7 +3,7 @@ import { getLang } from '../../helpers/Helpers';
 import BasketCard from '../basket_card/BasketCard'
 import BasketBoard from '../basket_board/BasketBoard';
 
-function Basket({basket, setBasket}){
+function Basket({basket, setBasket, setCount}){
     return (
         <main className={styles.main}>
             <div className={styles.main_hdphns_container}>
@@ -18,6 +18,7 @@ function Basket({basket, setBasket}){
                     {basket && basket?.map( el => {
                         return <BasketCard props={el} 
                             setBasket={setBasket} 
+                            setCount={setCount}
                             key={el.id}
                             />
                     })}

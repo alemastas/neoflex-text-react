@@ -1,8 +1,8 @@
 import styles from './basket_card.module.scss';
-import { deleteItem, plusItem, minusItem, getTempBasket } from '../../helpers/Helpers';
+import { deleteItem, plusItem, minusItem, getTempBasket, basketIndicatorFunction } from '../../helpers/Helpers';
 import { useState } from 'react';
 
-function BasketCard({props, setBasket}){ 
+function BasketCard({props, setBasket, setCount}){ 
 
     function sumOfCounts(id){
         let item = getTempBasket().find(el => el.id === id);
@@ -15,7 +15,7 @@ function BasketCard({props, setBasket}){
     }
 
     const [sum, setSum] = useState(props.price * props.counts);
-    const [count, setCounts] = useState(props.counts);
+    const [count, setItemCounts] = useState(props.counts);
 
     return (
         <div className={styles.basket_card}>
@@ -45,7 +45,8 @@ function BasketCard({props, setBasket}){
                     alt="delete item"
                     onClick={function (){
                         deleteItem(props.id);
-                        setBasket(getTempBasket())
+                        setBasket(getTempBasket());
+                        setCount(basketIndicatorFunction());
                     }}
                 />
                 </div>
@@ -57,7 +58,8 @@ function BasketCard({props, setBasket}){
                     onClick={function (){
                         minusItem(props.id);
                         setSum(sumOfCounts(props.id));
-                        setCounts(countsOfItem(props.id));
+                        setItemCounts(countsOfItem(props.id));
+                        setCount(basketIndicatorFunction());
                     }}>
                     -
                 </button>
@@ -69,7 +71,8 @@ function BasketCard({props, setBasket}){
                     onClick={function(){
                         plusItem(props.id);
                         setSum(sumOfCounts(props.id));
-                        setCounts(countsOfItem(props.id));
+                        setItemCounts(countsOfItem(props.id));
+                        setCount(basketIndicatorFunction());
 
                     }}
                     >

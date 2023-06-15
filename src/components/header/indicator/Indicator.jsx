@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import styles from'./indicator.module.scss';
-import { basketIndicatorFunction } from '../../../helpers/Helpers';
 
-function Indicator(){ // TODO fix indicator from useState
+function Indicator({count, setCount }){ // TODO fix indicator from useState
 
-    const [count, setCount] = useState(basketIndicatorFunction());
+    // here is was indicator's useState
     return (
         <div className={styles.icons}>
             <div className={styles.icon}>
