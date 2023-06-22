@@ -8,7 +8,9 @@ import Service from './service/Service';
 function Footer(){
     return (
         <footer className={styles.footer}>
-            <Logo />
+            <div className={styles.logo_move}>
+                <Logo />
+            </div>
             <Links />
             <Service />
             <SocialMedia />
