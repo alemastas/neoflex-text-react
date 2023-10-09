@@ -1,5 +1,5 @@
 import styles from './card.module.scss';
-import { addBasket } from '../../index';
+import { addBasket } from '../../helpers/Helpers';
 import { updateIndicator, getLang, getTempBasket } from '../../helpers/Helpers';
 
 function Card({props, setBasket}){ 

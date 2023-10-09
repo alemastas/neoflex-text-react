@@ -1,3 +1,4 @@
+import { Headphones } from '../const/Headphones';
 
 // ------------------------------------ basket logic ------------------------------------
 
@@ -49,6 +50,30 @@ export function checkLang(){
 
 // ------------------------------------ basket items logic ------------------------------------
 
+export function addBasket(id) { // add item to local storage)
+    let temp_basket = getTempBasket();
+    (temp_basket.length === 0) ? isNotDublicate(id) : ifDublicate(id);
+};
+
+
+export function ifDublicate(id) { // if sessionStorage includes added item
+    let foundDublicate = false;
+    let temp_basket = getTempBasket();
+    temp_basket.map(el => { // check on dublicate
+        if (el.id === id) {
+            el.counts++;
+            foundDublicate = true;
+        }
+    });
+    foundDublicate ? setTempBasket(temp_basket) : isNotDublicate(id);
+}
+
+  export function isNotDublicate(id) { // use if sessionStorage not includes added item
+    let temp_basket = getTempBasket();
+    temp_basket.push(Headphones[id]);
+    setTempBasket(temp_basket);
+}
+
 export function deleteItem(id){
     let temp_basket = getTempBasket();
     temp_basket.forEach( el => {
@@ -75,7 +100,7 @@ export function minusItem(id){
     let temp_basket = getTempBasket();
     temp_basket.forEach(el => {
         if(el.id === id){
-            if(el.counts < 1){ 
+            if(el.counts <= 1){
                 return;
             }
             el.counts--;
