@@ -2,6 +2,7 @@ import styles from './basket_board.module.scss';
 import { getLang, updateSum } from '../../helpers/Helpers'
 import { useState } from 'react';
 import Modal from '../paymentModal/Modal.module';
+import { basketLocale } from '../../const/locale';
 
 function Basket_board(){
 
@@ -26,7 +27,7 @@ function Basket_board(){
                 </div>
                 <button className={styles.basket_shop_button} onClick={el => setModalStatus(true)}>
                 <span className={styles.basket_shop_button_text} id="basket_shop_button_text">
-                    {getLang() === 'rus' ? 'Перейти к оформлению' : 'To ordering'}
+                    {getLang() === 'rus' ?  basketLocale.rus.basket_shop_button_text : basketLocale.eng.basket_shop_button_text}
                 </span>
                 </button>
             </div>

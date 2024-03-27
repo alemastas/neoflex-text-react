@@ -47,6 +47,7 @@
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between; // между подгруппами
+                // flex-wrap: wrap;
                 
                 .modal_group_items{
                     display: flex;

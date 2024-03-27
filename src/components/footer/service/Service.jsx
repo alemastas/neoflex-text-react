@@ -1,11 +1,12 @@
 import styles from './service.module.scss';
 import { setLang, getLang} from '../../../helpers/Helpers';
+import mainLocale from '../../../const/locale';
 
 function Service(){
     return(
         <div className={styles.services}>
             <p className={styles.lang_text} id="services" style={{ pointerEvents: "none" }}>
-                {getLang() === 'rus' ? 'Сервис' : 'Terms of service'}
+                {getLang() === 'rus' ? mainLocale.rus.services :  mainLocale.eng.services}
             </p>
             <div className={styles.lang_handler}>
                 <div className={styles.lang_icon}>
@@ -18,7 +19,7 @@ function Service(){
                 <button className={styles.lang_button} id="rus"
                     onClick={function (){
                         setLang('rus')
-                        window.location.reload() // TODO add something better
+                        window.location.reload() // TODO add something better, maybe useState
                     }}>
                     Рус
                 </button>
