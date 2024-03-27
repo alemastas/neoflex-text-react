@@ -1,8 +1,8 @@
 import styles from './basket.module.scss';
-import { getLang } from '../../helpers/Helpers';
+import { isRussian } from '../../helpers/Helpers';
 import BasketCard from '../basket_card/BasketCard'
 import BasketBoard from '../basket_board/BasketBoard';
-import { basketLocale } from '../../const/locale';
+import { mainLocale } from '../../const/locale';
 
 function Basket({basket, setBasket, setCount}){
     return (
@@ -10,7 +10,7 @@ function Basket({basket, setBasket, setCount}){
             <div className={styles.main_hdphns_container}>
                 <div className={styles.main_hdfns_title}>
                 <p className={styles.main_hdfns_title}>
-                    {getLang() === 'rus' ? basketLocale.rus.basket : basketLocale.eng.basket}
+                    {isRussian() ? mainLocale.rus.basket : mainLocale.eng.basket}
                 </p>
                 </div>
 

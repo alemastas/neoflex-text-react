@@ -1,7 +1,7 @@
 import styles from './main.module.scss';
 import { Headphones } from '../../const/Headphones';
 import Card from '../../components/card/Card';
-import { getLang } from '../../helpers/Helpers';
+import { isRussian } from '../../helpers/Helpers';
 import mainLocale from '../../const/locale';
 
 function Main({setBasket}){
@@ -11,7 +11,7 @@ function Main({setBasket}){
 
                 <div className={styles.main_hdfns_title}>
                 <p className={styles.main_hdfns_title}>
-                    {getLang() === 'rus' ? mainLocale.rus.headph : mainLocale.eng.headph}
+                    {isRussian() ? mainLocale.rus.headph : mainLocale.eng.headph}
                 </p>
                 </div>
                 <div className={styles.card_container} id="hdph_container">
@@ -26,7 +26,7 @@ function Main({setBasket}){
             <div className={styles.main_hdphns_container}>
                 <div className={styles.main_hdfns_title}>
                 <p className={styles.main_hdfns_title}>
-                    {getLang() === 'rus' ? mainLocale.rus.wirelessph : mainLocale.eng.wirelessph}
+                    {isRussian() ? mainLocale.rus.wirelessph : mainLocale.eng.wirelessph}
                 </p>
                 </div>
                 <div className={styles.card_container} id="wrls_container">

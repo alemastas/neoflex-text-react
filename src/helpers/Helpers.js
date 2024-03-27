@@ -36,6 +36,10 @@ export function updateIndicator(){ // show global counts of items in basket
 export function getLang() {
     return JSON.parse(sessionStorage.getItem('lang'));
 }
+
+export function isRussian() {
+    return (getLang() === 'rus')
+}
   
 export function setLang(lang) { // rus or eng
     sessionStorage.setItem('lang', JSON.stringify(lang));
@@ -56,7 +60,7 @@ export function addBasket(id) { // add item to local storage)
 export function ifDublicate(id) { // if sessionStorage includes added item
     let foundDublicate = false;
     let temp_basket = getTempBasket();
-    temp_basket.map(el => { // check on dublicate
+    temp_basket.forEach(el => { // check on dublicate
         if (el.id === id) {
             el.counts++;
             foundDublicate = true;

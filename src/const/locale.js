@@ -1,50 +1,37 @@
-
 export const mainLocale = {
     rus: {
         headph: 'Наушники',
         wirelessph: 'Беспроводные наушники',
         favorite: 'Избранное',
-        basket: 'Корзина',
         contacts: 'Контакты',
-        services: 'Условия сервиса',
-    },
-    eng: {
-        headph: 'Headphones',
-        wirelessph: 'Wireless headphones',
-        favorite: 'Favorite',
-        basket: 'Basket',
-        contacts: 'Contacts',
-        services: 'Terms of service',
-    }
-}
-
-export const basketLocale = {
-    rus: {
         headph_lang: 'Корзина',
-        favorite: 'Избранное',
         basket: 'Корзина',
-        contacts: 'Контакты',
-        services: 'Условия сервиса',
         basket_shop_button_text: 'Перейти к оформлению',
+        services: 'Условия сервиса',
+        sum: 'Итого',
         payment:'Оплата',
         card: 'Номер карты',
         date: 'Дата',
         code: 'Код',
         conf: 'ПОДТВЕРЖДАЮ',
+        buy: 'Купить'
     },
     eng: {
-        headph_lang: 'Basket',
+        headph: 'Headphones',
+        wirelessph: 'Wireless headphones',
         favorite: 'Favorite',
-        basket: 'Basket',
         contacts: 'Contacts',
-        services: 'Terms of service',
+        headph_lang: 'Basket',
+        basket: 'Basket',
         basket_shop_button_text: 'To ordering',
+        services: 'Terms of service',
+        sum: 'Total sum',
         payment:'Payment',
         card: "Card's numbers",
         date: 'Date',
         code: 'Code',
         conf: 'CONFIRM',
-
+        buy: 'Buy'
     }
 }
 

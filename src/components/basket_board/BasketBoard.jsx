@@ -1,8 +1,8 @@
 import styles from './basket_board.module.scss';
-import { getLang, updateSum } from '../../helpers/Helpers'
+import { isRussian, updateSum } from '../../helpers/Helpers'
 import { useState } from 'react';
 import Modal from '../paymentModal/Modal.module';
-import { basketLocale } from '../../const/locale';
+import { mainLocale } from '../../const/locale';
 
 function Basket_board(){
 
@@ -18,7 +18,7 @@ function Basket_board(){
             <Modal modalStatus={modalStatus} setModalStatus={setModalStatus}></Modal>  
             <div className={styles.basket_shop}>
                 <div className={styles.basket_placeholder}>
-                <h3>Итого</h3>
+                <h3>{isRussian() ?  mainLocale.rus.sum : mainLocale.eng.sum}</h3>
                 <div className={styles.result_palceholder}>
                     <h3>₽ </h3>
                     <h3 id="shop_result"
@@ -27,7 +27,7 @@ function Basket_board(){
                 </div>
                 <button className={styles.basket_shop_button} onClick={el => setModalStatus(true)}>
                 <span className={styles.basket_shop_button_text} id="basket_shop_button_text">
-                    {getLang() === 'rus' ?  basketLocale.rus.basket_shop_button_text : basketLocale.eng.basket_shop_button_text}
+                    {isRussian() ?  mainLocale.rus.basket_shop_button_text : mainLocale.eng.basket_shop_button_text}
                 </span>
                 </button>
             </div>
