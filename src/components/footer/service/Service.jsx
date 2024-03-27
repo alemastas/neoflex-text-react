@@ -18,6 +18,7 @@ function Service(){
                 <button className={styles.lang_button} id="rus"
                     onClick={function (){
                         setLang('rus')
+                        window.location.reload() // TODO add something better
                     }}>
                     Рус
                 </button>
@@ -25,6 +26,7 @@ function Service(){
                     id="eng"
                     onClick={function (){
                         setLang('eng')
+                        window.location.reload() // TODO add something better
                     }}>
                     Eng
                 </button>

@@ -1,7 +1,15 @@
 body {
-  width: 1300px;
+  width: 1110px;
   margin: 0 auto;
   box-sizing: border-box;
   background-color: #EAEAEA;
-  padding: 0 100px 0 100px; 
+
+  // @media (min-width:640px) and (max-width: 1150px){
+  //   margin: 0 20px 0 0px;
+  // }
+  // @media (min-width:320px) and (max-width: 640px){
+  // }
+  // @media (max-width: 320px){
+  // }
+
 }

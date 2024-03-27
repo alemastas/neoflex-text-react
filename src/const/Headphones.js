@@ -1,6 +1,7 @@
 // shop items headphones
 // hdph - wired headphones
 // wrls - wireless headphones
+
 export const Headphones = [
     {
         img: 'img/headphones/Image1.png',

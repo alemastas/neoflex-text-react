@@ -9,6 +9,7 @@ main{
         .main_hdfns_title{
             position: relative;
             top: 5px;
+            left: 10px;
         
             font-family: 'Montserrat';
             font-style: normal;
@@ -23,7 +24,6 @@ main{
         width: 1140px;
 
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
         }
     }

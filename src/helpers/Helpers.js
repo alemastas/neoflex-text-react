@@ -5,7 +5,7 @@ import { Headphones } from '../const/Headphones';
 const basketArray = []; // work sample
 
 export function isBasketExist() { // check basket in local storage. create new empty if basket is empty
-    if (getTempBasket() === null) {
+    if (!getTempBasket()) {
         setTempBasket(basketArray);
     }
 }
@@ -21,12 +21,9 @@ export function setTempBasket(temp_basket) {
 // ------------------------------------ basket indicator logic ------------------------------------
 
 export function basketIndicatorFunction(){ // show sum of basketArray items in sessionStorage
-    // let sumOfCounts = 0;
-    // (JSON.parse( sessionStorage.getItem('basketArray')))?.map(el => { 
-    //     return sumOfCounts += el.counts
-    // })
-    // return sumOfCounts;
-    return getTempBasket().length;
+    if (getTempBasket()){
+        return getTempBasket().length;
+    } else return 0;
 }
 
 export function updateIndicator(){ // show global counts of items in basket
@@ -45,7 +42,7 @@ export function setLang(lang) { // rus or eng
 }
 
 export function checkLang(){
-    if(getLang() == null){ setLang('eng')}
+    if(!getLang()){ setLang('eng')}
 }
 
 // ------------------------------------ basket items logic ------------------------------------
@@ -68,7 +65,7 @@ export function ifDublicate(id) { // if sessionStorage includes added item
     foundDublicate ? setTempBasket(temp_basket) : isNotDublicate(id);
 }
 
-  export function isNotDublicate(id) { // use if sessionStorage not includes added item
+export function isNotDublicate(id) { // use if sessionStorage not includes added item
     let temp_basket = getTempBasket();
     temp_basket.push(Headphones[id]);
     setTempBasket(temp_basket);

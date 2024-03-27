@@ -1,0 +1,89 @@
+.modal_true{
+    .modal_wrapper{
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 2;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .modal_content{
+            width: 30%;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            .modal_btn_wrapper{
+                display:flex;
+                justify-content: space-between;
+                flex-direction: row;
+                align-items: center;
+                .modal_button{
+                    width: 50px;
+                    height: 20px;
+                    border: none;
+                    background-color: white;
+                }
+                .modal_icon{
+                    position: relative;
+                    left: 10px;
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                }
+                .modal_icon:hover{
+                    content: attr(data-title);
+                    z-index: 1; 
+                    background: #ffa442d4; 
+                    border: 1px solid #333; 
+                    border-radius: 5px;
+                }
+            }
+            .modal_group{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between; // между подгруппами
+                
+                .modal_group_items{
+                    display: flex;
+                    align-items: center;
+                    padding: 20px 0 20px 0;
+                }
+            }
+            .modal_text{
+                display: flex;
+                height: 20px;
+                border-radius: 5px;
+                resize: none; 
+            }
+            .modal_span{
+                margin-right: 10px;
+            }
+            .modal_submite{
+                height: 30px;
+                border-radius: 5px;
+                cursor: pointer;
+                background: #ffa442d4; 
+                font-size: larger;
+                // border: none;
+            }
+            .modal_submite:hover{
+                transform: scale(0.98);
+            }
+            .modal_submite:active{
+                transform: scale(1);
+            }
+            .modal_sum{
+                height: 10%;
+            }
+        }
+    }
+}
+
+.modal_false{
+    display: none;
+}

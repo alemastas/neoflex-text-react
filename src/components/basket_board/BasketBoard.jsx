@@ -1,10 +1,12 @@
 import styles from './basket_board.module.scss';
 import { getLang, updateSum } from '../../helpers/Helpers'
 import { useState } from 'react';
+import Modal from '../paymentModal/Modal.module';
 
 function Basket_board(){
 
     const [sum, setSum] = useState(updateSum);
+    const [modalStatus, setModalStatus] = useState(false);
 
     window.onclick = function(){ // TODO make it smarter
         setSum(updateSum());
@@ -12,6 +14,7 @@ function Basket_board(){
 
     return (
         <div className={styles.basket_wrapper}>
+            <Modal modalStatus={modalStatus} setModalStatus={setModalStatus}></Modal>  
             <div className={styles.basket_shop}>
                 <div className={styles.basket_placeholder}>
                 <h3>Итого</h3>
@@ -21,7 +24,7 @@ function Basket_board(){
                     >{sum}</h3>
                 </div>
                 </div>
-                <button className={styles.basket_shop_button}>
+                <button className={styles.basket_shop_button} onClick={el => setModalStatus(true)}>
                 <span className={styles.basket_shop_button_text} id="basket_shop_button_text">
                     {getLang() === 'rus' ? 'Перейти к оформлению' : 'To ordering'}
                 </span>
