@@ -1,4 +1,4 @@
-export const mainLocale = {
+export const Locale = {
     rus: {
         headph: 'Наушники',
         wirelessph: 'Беспроводные наушники',
@@ -35,4 +35,4 @@ export const mainLocale = {
     }
 }
 
-export default mainLocale;
+export default Locale;

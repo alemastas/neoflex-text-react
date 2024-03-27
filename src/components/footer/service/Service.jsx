@@ -1,12 +1,12 @@
 import styles from './service.module.scss';
 import { setLang, isRussian} from '../../../helpers/Helpers';
-import mainLocale from '../../../const/locale';
+import Locale from '../../../const/locale';
 
 function Service(){
     return(
         <div className={styles.services}>
             <p className={styles.lang_text} id="services" style={{ pointerEvents: "none" }}>
-                {isRussian() ? mainLocale.rus.services :  mainLocale.eng.services}
+                {isRussian() ? Locale.rus.services :  Locale.eng.services}
             </p>
             <div className={styles.lang_handler}>
                 <div className={styles.lang_icon}>

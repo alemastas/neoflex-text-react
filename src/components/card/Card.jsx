@@ -1,7 +1,7 @@
 import styles from './card.module.scss';
 import { addBasket } from '../../helpers/Helpers';
 import { updateIndicator, isRussian, getTempBasket } from '../../helpers/Helpers';
-import { mainLocale } from '../../const/locale';
+import { Locale } from '../../const/locale';
 
 function Card({props, setBasket}){ 
     
@@ -43,7 +43,7 @@ function Card({props, setBasket}){
                     onClick={btnClick}
                     >
                 <span className={styles.card_button_text} id={props.id}>
-                    {isRussian() ? mainLocale.rus.buy : mainLocale.eng.buy}
+                    {isRussian() ? Locale.rus.buy : Locale.eng.buy}
                 </span>
                 </button>
             </div>
