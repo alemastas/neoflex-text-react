@@ -25,7 +25,7 @@ function Basket_board(){
                     >{sum}</h3>
                 </div>
                 </div>
-                <button className={styles.basket_shop_button} onClick={el => setModalStatus(true)}>
+                <button className={styles.basket_shop_button} onClick={() => setModalStatus(true)}>
                 <span className={styles.basket_shop_button_text} id="basket_shop_button_text">
                     {isRussian() ?  Locale.rus.basket_shop_button_text : Locale.eng.basket_shop_button_text}
                 </span>

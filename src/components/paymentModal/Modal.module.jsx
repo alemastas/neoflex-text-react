@@ -11,7 +11,7 @@ export function Modal(modalStatus, setModalStatus){
                 <div className={styles.modal_content}>
                     <div className={styles.modal_btn_wrapper}>
                         <h2>{isRussian() ? Locale.rus.payment : Locale.eng.payment}</h2>
-                        <button className={styles.modal_button} onClick={el => modalStatus.setModalStatus(false)}>
+                        <button className={styles.modal_button} onClick={() => modalStatus.setModalStatus(false)}>
                                 <img src="/img/icons/close.png" alt="close" data-title="Close" className={styles.modal_icon}/>
                         </button>
                     </div>
