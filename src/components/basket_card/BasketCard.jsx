@@ -3,19 +3,20 @@ import { deleteItem, plusItem, minusItem, getTempBasket, basketIndicatorFunction
 import { useState } from 'react';
 
 function BasketCard({props, setBasket, setCount}){ 
+    const [sum, setSum] = useState(props.price * props.counts);
+    const [count, setItemCounts] = useState(props.counts);
+
+    function itemCounts(id){
+        return getTempBasket().find(el => el.id === id);
+    }
 
     function sumOfCounts(id){
-        let item = getTempBasket().find(el => el.id === id);
-        return item.counts * item.price;
+        return itemCounts(id).counts * itemCounts(id).price;
     }
 
     function countsOfItem(id){
-        let item = getTempBasket().find(el => el.id === id);
-        return item.counts;
+        return itemCounts(id).counts;
     }
-
-    const [sum, setSum] = useState(props.price * props.counts);
-    const [count, setItemCounts] = useState(props.counts);
 
     return (
         <div className={styles.basket_card}>

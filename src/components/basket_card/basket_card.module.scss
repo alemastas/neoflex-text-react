@@ -10,72 +10,66 @@
     border-radius: 30px;
 
     margin: 15px 0 15px 0;
+    .basket_card_line{
+        width: 633px;
+        height: 170px;
+        z-index: 1;
+        position: relative;
+    
+        display: flex;
+        flex-direction: row;
+        .basket_card_img_holder{
+            width: 170px;
+            padding: 20px;
+        }
+        
+        .basket_card_img{
+            width: 146px;
+            height: 136px;
+        }
+        .basket_card_naming{
+            width: 150px;
+            display: flex;
+            flex-direction: column;
+            margin: 40px 0 0 10px;
+        }
+        .basket_delete_item{
+            padding-top: 20px;
+            margin: 0 0 0 220px;
+        }
+    }
+    .basket_card_counter{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 20px 0 5px;
+    
+        width: 600px;
+        .basket_card_numbers{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 20px;
+            width: 125px;
+            height: 30px;
+        
+            line-height: 30px;
+        }
+        .basket_card_counter_btn{
+            width: 30px;
+            height: 30px;
+        
+            border-radius: 15px;
+            border-style: none;
+            background-color: #FFCE7F;
+            cursor: pointer;
+        }
+    }
+    .basket_card_text{
+        line-height: 0;
+        margin: 10px;
+        font-size: 20px;
+    }
 }
 
-.basket_card_img_holder{
-    width: 170px;
-    padding: 20px;
-}
 
-.basket_card_img{
-    width: 146px;
-    height: 136px;
-}
-
-.basket_card_line{
-    width: 633px;
-    height: 170px;
-    z-index: 1;
-    position: relative;
-
-    display: flex;
-    flex-direction: row;
-}
-
-.basket_card_naming{
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    margin: 40px 0 0 10px;
-}
-
-.basket_delete_item{
-    padding-top: 20px;
-    margin: 0 0 0 220px;
-}
-
-.basket_card_counter{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 20px 0 5px;
-
-    width: 600px;
-}
-
-.basket_card_numbers{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: 20px;
-    width: 125px;
-    height: 30px;
-
-    line-height: 30px;
-}
-
-.basket_card_counter_btn{
-    width: 30px;
-    height: 30px;
-
-    border-radius: 15px;
-    border-style: none;
-    background-color: #FFCE7F;
-    cursor: pointer;
-}
-
-.basket_card_text{
-    line-height: 0;
-    margin: 10px;
-    font-size: 20px;
-}
