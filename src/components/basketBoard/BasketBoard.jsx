@@ -1,7 +1,7 @@
 import styles from './basketBoard.module.scss';
 import { isRussian, updateSum } from '../../helpers/Helpers'
 import { useState } from 'react';
-import Modal from '../payment_modal/Modal.module';
+import Modal from '../paymentModal/Modal.module';
 import { Locale } from '../../const/locale';
 
 function Basket_board(){
