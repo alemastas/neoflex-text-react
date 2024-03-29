@@ -136,3 +136,22 @@ export function countsOfItem(id){
 }
 
 // ------------------------------------ basket card's buttons ------------------------------------
+
+
+export function clickMinus(props, setSum, setfindElements){
+    minusItem(props.id);
+    setSum(totalItemSum(props.id));
+    setfindElements(countsOfItem(props.id));
+}
+
+export function clickPlus(props, setSum, setfindElements){
+    plusItem(props.id);
+    setSum(totalItemSum(props.id));
+    setfindElements(countsOfItem(props.id));
+}
+
+export function deleteClick(props, setBasket, setCount){
+    deleteItem(props.id);
+    setBasket(getTempBasket());
+    setCount(basketIndicatorFunction());
+}

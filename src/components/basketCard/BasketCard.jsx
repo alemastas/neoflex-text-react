@@ -1,5 +1,5 @@
 import styles from './basketCard.module.scss'
-import { deleteItem, plusItem, minusItem, getTempBasket, basketIndicatorFunction, totalItemSum, countsOfItem} from '../../helpers/Helpers';
+import { clickMinus, clickPlus, deleteClick} from '../../helpers/Helpers';
 import { useState } from 'react';
 
 function BasketCard({props, setBasket, setCount}){ 
@@ -32,10 +32,8 @@ function BasketCard({props, setBasket, setCount}){
                     id={props.id}
                     src='/img/icons/Rubish.png'
                     alt="delete item"
-                    onClick={function (){
-                        deleteItem(props.id);
-                        setBasket(getTempBasket());
-                        setCount(basketIndicatorFunction());
+                    onClick={() => {
+                        deleteClick(props, setBasket, setCount)
                     }}
                 />
                 </div>
@@ -44,10 +42,8 @@ function BasketCard({props, setBasket, setCount}){
                 <div className={styles.basket_card_numbers}>
                 <button className={styles.basket_card_counter_btn} 
                     id={props.id}
-                    onClick={function (){
-                        minusItem(props.id);
-                        setSum(totalItemSum(props.id));
-                        setfindElements(countsOfItem(props.id));
+                    onClick={() => {
+                        clickMinus(props, setSum, setfindElements);
                     }}>
                     -
                 </button>
@@ -56,10 +52,8 @@ function BasketCard({props, setBasket, setCount}){
                 </span>
                 <button className={styles.basket_card_counter_btn} 
                     id={props.id}
-                    onClick={function(){
-                        plusItem(props.id);
-                        setSum(totalItemSum(props.id));
-                        setfindElements(countsOfItem(props.id));
+                    onClick={() => {
+                        clickPlus(props, setSum, setfindElements);
                     }}
                     >
                     +
