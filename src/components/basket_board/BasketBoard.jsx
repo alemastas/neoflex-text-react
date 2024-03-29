@@ -5,7 +5,6 @@ import Modal from '../payment_modal/Modal.module';
 import { Locale } from '../../const/locale';
 
 function Basket_board(){
-
     const [sum, setSum] = useState(updateSum);
     const [modalStatus, setModalStatus] = useState(false);
 

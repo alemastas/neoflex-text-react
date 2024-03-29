@@ -1,21 +1,22 @@
 import styles from './basket_card.module.scss';
-import { deleteItem, plusItem, minusItem, getTempBasket, basketIndicatorFunction } from '../../helpers/Helpers';
+import { deleteItem, plusItem, minusItem, getTempBasket, basketIndicatorFunction} from '../../helpers/Helpers';
 import { useState } from 'react';
 
 function BasketCard({props, setBasket, setCount}){ 
     const [sum, setSum] = useState(props.price * props.counts);
-    const [count, setItemCounts] = useState(props.counts);
+    const [count, setfindElements] = useState(props.counts);
 
-    function itemCounts(id){
+    function findElements(id){
         return getTempBasket().find(el => el.id === id);
     }
 
-    function sumOfCounts(id){
-        return itemCounts(id).counts * itemCounts(id).price;
+    function totalItemSum(id){
+        const {counts, price} = findElements(id);
+        return counts * price;
     }
 
     function countsOfItem(id){
-        return itemCounts(id).counts;
+        return findElements(id).counts;
     }
 
     return (
@@ -58,8 +59,8 @@ function BasketCard({props, setBasket, setCount}){
                     id={props.id}
                     onClick={function (){
                         minusItem(props.id);
-                        setSum(sumOfCounts(props.id));
-                        setItemCounts(countsOfItem(props.id));
+                        setSum(totalItemSum(props.id));
+                        setfindElements(countsOfItem(props.id));
                     }}>
                     -
                 </button>
@@ -70,8 +71,8 @@ function BasketCard({props, setBasket, setCount}){
                     id={props.id}
                     onClick={function(){
                         plusItem(props.id);
-                        setSum(sumOfCounts(props.id));
-                        setItemCounts(countsOfItem(props.id));
+                        setSum(totalItemSum(props.id));
+                        setfindElements(countsOfItem(props.id));
                     }}
                     >
                     +
