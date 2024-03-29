@@ -1,7 +1,7 @@
 import styles from './basket.module.scss';
 import { isRussian } from '../../helpers/Helpers';
-import BasketCard from '../basket_card/BasketCard'
-import BasketBoard from '../basket_board/BasketBoard';
+import BasketCard from '../basketCard/BasketCard'
+import BasketBoard from '../basketBoard/BasketBoard';
 import { Locale } from '../../const/locale';
 
 function Basket({basket, setBasket, setCount}){

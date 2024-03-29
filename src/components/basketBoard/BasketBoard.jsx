@@ -1,4 +1,4 @@
-import styles from './basket_board.module.scss';
+import styles from './basketBoard.module.scss';
 import { isRussian, updateSum } from '../../helpers/Helpers'
 import { useState } from 'react';
 import Modal from '../payment_modal/Modal.module';

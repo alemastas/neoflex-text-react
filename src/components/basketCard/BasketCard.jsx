@@ -1,4 +1,4 @@
-import styles from './basket_card.module.scss';
+import styles from './basketCard.module.scss'
 import { deleteItem, plusItem, minusItem, getTempBasket, basketIndicatorFunction} from '../../helpers/Helpers';
 import { useState } from 'react';
 
