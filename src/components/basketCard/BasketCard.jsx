@@ -1,23 +1,10 @@
 import styles from './basketCard.module.scss'
-import { deleteItem, plusItem, minusItem, getTempBasket, basketIndicatorFunction} from '../../helpers/Helpers';
+import { deleteItem, plusItem, minusItem, getTempBasket, basketIndicatorFunction, totalItemSum, countsOfItem} from '../../helpers/Helpers';
 import { useState } from 'react';
 
 function BasketCard({props, setBasket, setCount}){ 
     const [sum, setSum] = useState(props.price * props.counts);
     const [count, setfindElements] = useState(props.counts);
-
-    function findElements(id){
-        return getTempBasket().find(el => el.id === id);
-    }
-
-    function totalItemSum(id){
-        const {counts, price} = findElements(id);
-        return counts * price;
-    }
-
-    function countsOfItem(id){
-        return findElements(id).counts;
-    }
 
     return (
         <div className={styles.basket_card}>

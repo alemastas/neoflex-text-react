@@ -119,3 +119,20 @@ export function updateSum(){
     ))
     return totalSum;
 }
+
+// ------------------------------------ basket card logic ------------------------------------
+
+export function findElements(id){
+    return getTempBasket().find(el => el.id === id);
+}
+
+export function totalItemSum(id){
+    const {counts, price} = findElements(id);
+    return counts * price;
+}
+
+export function countsOfItem(id){
+    return findElements(id).counts;
+}
+
+// ------------------------------------ basket card's buttons ------------------------------------
