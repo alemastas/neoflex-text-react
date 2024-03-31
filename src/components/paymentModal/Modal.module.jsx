@@ -15,22 +15,21 @@ export function Modal(modalStatus, setModalStatus){
                                 <img src="/img/icons/close.png" alt="close" data-title="Close" className={styles.modal_icon}/>
                         </button>
                     </div>
-                    <span className={styles.modal_span}>{isRussian() ?  Locale.rus.card : Locale.eng.card}</span><textarea className={styles.modal_text}></textarea>
+
+                    <span className={styles.modal_span}>{isRussian() ?  Locale.rus.card : Locale.eng.card}</span><textarea className={styles.modal_imput}></textarea>
                     <div className={styles.modal_group}>
                         <div className={styles.modal_group_items}>
-                            <span className={styles.modal_span}>{isRussian() ? Locale.rus.date : Locale.eng.date}</span><textarea className={styles.modal_text}></textarea>
+                            <span className={styles.modal_span}>{isRussian() ? Locale.rus.date : Locale.eng.date}</span><textarea className={styles.modal_imput}></textarea>
                             <span className={styles.modal_span}>M/Y</span>
                         </div>
+
                         <div className={styles.modal_group_items}>  
                             <span className={styles.modal_span}>{isRussian() ? Locale.rus.code : Locale.eng.code}</span>
-                            <textarea className={styles.modal_text}></textarea>
+                            <textarea className={styles.modal_imput}></textarea>
                         </div>
                     </div>
                     <button className={styles.modal_submite}>{isRussian() ? Locale.rus.conf : Locale.eng.conf}</button>
-                    {/* <div className={styles.modal_sum}> // add total sum of items
-                        <h3>{}</h3>
-                    </div> */}
-                </div>
+                </div> 
             </div>
         </div>
     )

@@ -1,15 +1,3 @@
-.social_media_icon:hover::after {
-    content: attr(data-title);
-    position: absolute; 
-    left: 20%; top: 30%; 
-    z-index: 1; 
-    background: #ffa442d4; 
-    font-family: 'Montserrat';
-    font-size: 15px; 
-    padding: 5px 0; 
-    border: 1px solid #333; 
-    border-radius: 5px;
-}
 
 .social_media{
     position: relative;
@@ -21,13 +9,37 @@
     align-items: center;
     justify-content: space-between;
 
-    margin: 29px 20px 0 0;
+    margin: 20px 20px 0 0;
     .minimize_icon{
         width: 33px;
         height: 33px;
+        @media (max-width: 500px){
+            width: 45px;
+            height: 43px;
+        }
     }
-    @media (max-width: 840px){
-        padding: 15px 0 0 40px;
-        margin: 0 auto;
+    @media (max-width: 500px){
+        margin: 0;
+    }
+    // .social_media_icon{
+    //     // hi C:
+    // }
+    .social_media_icon:hover::after {
+        content: attr(data-title);
+        position: absolute; 
+        left: 20%; top: 30%; 
+        z-index: 1; 
+        background: #ffa442d4; 
+        font-family: 'Montserrat';
+        font-size: 15px; 
+        padding: 5px 0; 
+        border: 1px solid #333; 
+        border-radius: 5px;
+    }
+    @media (max-width: 500px){
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
     }
 }
+

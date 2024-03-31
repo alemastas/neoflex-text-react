@@ -1,14 +1,12 @@
 .services{
-    text-align: center;
-
-    margin: 0 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .lang_handler{
         display: flex;
         flex-direction: row;
         align-items: center;
         position: relative;
-
-        margin-top: 30px;
     }
     .lang_button{
         border: none;
@@ -20,6 +18,13 @@
         font-style: normal;
         font-weight: 600;
         font-size: 17px;
+        @media (max-width: 500px){
+            border-radius: 5px;
+            font-size: 25px;
+            margin-left: 5px;
+            background-color: #FFA542;
+
+        } 
     }
     .lang_button:hover{
         cursor: pointer;
@@ -37,11 +42,14 @@
         font-style: normal;
         font-weight: 600;
         font-size: 17px;
+        @media (max-width: 500px){
+            font-size: 25px;
+        } 
     }
     .colored{
         color: orange;
     }
-    @media (max-width: 840px){
-        
+    @media (max-width: 500px){
+        margin: 10px 0 20px 0;
     }
 }

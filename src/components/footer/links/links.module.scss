@@ -1,4 +1,5 @@
 .links_ul{
+    width: 121px;
     list-style: none;
     .links_text{
         line-height: 30px;
@@ -11,5 +12,8 @@
             text-decoration: none;
             color: black;
         }
+        @media (max-width: 500px){
+            font-size: 25px;
+        } 
     }
 }

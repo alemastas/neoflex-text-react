@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../header/logo/Logo';
+import Logo from '../logo/Logo';
 import styles from './footer.module.scss';
 import Links from './links/Links'
 import SocialMedia from './socialMedia/SocialMedia'

@@ -2,11 +2,14 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    // position: relative;
-    // right: 50px;
-
     .icon{
         margin-left: 15px;
+        .img{
+            @media (max-width: 500px){
+                width: 50px;
+                height: 50px;
+            } 
+        }
     }
     .basket_indicator{
         text-align: center;
@@ -18,5 +21,17 @@
         border-radius: 15px;
         z-index: 1;
         background-color: #FFA542;
+        @media (max-width: 500px){
+            width: 40px;
+            height: 40px;
+            font-size: 30px
+            // padding: 0 30px 0 30px;
+        } 
+
     }
+    @media (max-width: 500px){
+        position: relative;
+        top: 5px;
+        left: 20px;
+    } 
 }
