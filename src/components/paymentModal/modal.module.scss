@@ -3,21 +3,25 @@
     .modal_wrapper{
         position: fixed;
         top: 0; left: 0;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         z-index: 2;
         background-color: rgba($color: #000000, $alpha: 0.5);
         display: flex;
         align-items: center;
         justify-content: center;
         .modal_content{
-            width: 30%;
             padding: 10px;
             border-radius: 15px;
             background-color: white;
             display: flex;
             flex-direction: column;
             .modal_btn_wrapper{
+                h2{
+                    @media (max-width: 500px){
+                        font-size: 50px;
+                    }
+                }
                 display:flex;
                 justify-content: space-between;
                 flex-direction: row;
@@ -48,7 +52,6 @@
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between; // между подгруппами
-                // flex-wrap: wrap;
                 
                 .modal_group_items{
                     display: flex;
@@ -71,6 +74,10 @@
             }
             .modal_span{
                 margin-right: 10px;
+                @media (max-width: 500px){
+                    font-size: 40px;
+                }
+                
             }
             .modal_submite{
                 height: 30px;
@@ -78,7 +85,6 @@
                 cursor: pointer;
                 background: #ffa442d4; 
                 font-size: larger;
-                // border: none;
             }
             .modal_submite:hover{
                 transform: scale(0.98);
