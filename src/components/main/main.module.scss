@@ -2,6 +2,12 @@ main{
     margin: 0 15px 0 15px;
     max-width: 1140px;
     width: 100%;
+    @media (min-width: 1140px){
+        width: 1140px;
+    }
+    @media (max-width: 1140px){
+        width: 100vw;
+    }
     .main_hdphns_container{
         position: relative;
         display: flex;
